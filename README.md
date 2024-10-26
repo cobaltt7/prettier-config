@@ -26,8 +26,6 @@ My Prettier style guide
     *.tsbuildinfo
     ```
 
-````
-
 4. To format your code, simply run
 
     ```bash
@@ -35,4 +33,3 @@ My Prettier style guide
     ```
 
 Congrats! You've successfully integrated ESLint into your project with `@redguy12/prettier-config`!
-````
