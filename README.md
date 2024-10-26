@@ -24,7 +24,9 @@ My Prettier style guide
     ./dist/
     ./node_modules/
     *.tsbuildinfo
-```
+    ```
+
+````
 
 4. To format your code, simply run
 
@@ -33,3 +35,4 @@ My Prettier style guide
     ```
 
 Congrats! You've successfully integrated ESLint into your project with `@redguy12/prettier-config`!
+````
