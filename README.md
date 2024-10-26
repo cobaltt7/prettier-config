@@ -20,10 +20,11 @@ My Prettier style guide
 3. Create a `.prettierignore` file with the following content:
 
     ```ignore
-    node_modules
-    .eslintcache
-    dist/**
-    ```
+    ./.vscode
+    ./dist/
+    ./node_modules/
+    *.tsbuildinfo
+```
 
 4. To format your code, simply run
 

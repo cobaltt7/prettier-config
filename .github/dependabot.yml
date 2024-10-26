@@ -1,9 +1,18 @@
 version: 2
 updates:
-    - package-ecosystem: npm
+    - package-ecosystem: "github-actions"
       directory: "/"
       schedule:
           interval: "daily"
-          time: "12:45"
+          time: "20:45"
+
+    - package-ecosystem: "npm"
+      directory: "/"
       schedule:
-          interval: daily
+          interval: "daily"
+          time: "20:45"
+      ignore:
+          - dependency-name: "@types/*"
+          - dependency-name: "@twemoji/parser"
+          - dependency-name: "discord.js"
+          - dependency-name: "prettier"
