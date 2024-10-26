@@ -11,8 +11,3 @@ updates:
       schedule:
           interval: "daily"
           time: "20:45"
-      ignore:
-          - dependency-name: "@types/*"
-          - dependency-name: "@twemoji/parser"
-          - dependency-name: "discord.js"
-          - dependency-name: "prettier"
