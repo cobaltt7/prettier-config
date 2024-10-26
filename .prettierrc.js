@@ -20,10 +20,7 @@ const config = {
 		"^[.]",
 		"",
 	],
-	importOrderTypeScriptVersion: require("typescript").then(
-		(typescript) => typescript.version,
-		() => undefined,
-	),
+	importOrderTypeScriptVersion: getTypeScriptVersion(),
 
 	jsdocAddDefaultToDescription: false,
 	jsdocDescriptionWithDot: true,
@@ -54,3 +51,11 @@ const config = {
 	],
 };
 module.exports = config;
+
+function getTypeScriptVersion() {
+	try {
+		return require("typescript").version;
+	} catch {
+		return undefined;
+	}
+}
