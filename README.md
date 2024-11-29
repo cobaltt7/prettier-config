@@ -14,22 +14,13 @@ My Prettier style guide
 
     ```json
     "prettier": "@redguy12/prettier-config",
-    "scripts": { "format": "prettier --write \"**\" --ignore-unknown --cache" }
+    "scripts": { "format": "prettier --write \"**\" \"!./dist\" --ignore-unknown --cache" }
     ```
 
-3. Create a `.prettierignore` file with the following content:
-
-    ```ignore
-    ./.vscode
-    ./dist/
-    ./node_modules/
-    *.tsbuildinfo
-    ```
-
-4. To format your code, simply run
+3. To format your code, simply run
 
     ```bash
-    npm run format
+    node --run format
     ```
 
 Congrats! You've successfully integrated ESLint into your project with `@redguy12/prettier-config`!
