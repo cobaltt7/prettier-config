@@ -18,7 +18,6 @@ const config = {
 		"<THIRD_PARTY_MODULES>",
 		"",
 		"^[.]",
-		"",
 	],
 	importOrderTypeScriptVersion: getTypeScriptVersion(),
 
@@ -46,6 +45,7 @@ const config = {
 	plugins: [
 		require.resolve("@ianvs/prettier-plugin-sort-imports"),
 		require.resolve("prettier-plugin-jsdoc"),
+		require.resolve("prettier-plugin-css-order"),
 		require.resolve("prettier-plugin-packagejson"),
 		require.resolve("prettier-plugin-ini"),
 	],

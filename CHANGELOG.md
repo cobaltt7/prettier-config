@@ -2,6 +2,20 @@
 
 We use semantic versioning (SemVer). [More information here](https://semver.org/).
 
+## [v3.2.0](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.1.1) (2024-11-29) - **Latest**
+
+- Add `prettier-plugin-css-order`
+- Bump dependencies
+
+## [v3.1.1](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.1.1) (2024-10-26)
+
+- Fix dev dependencies
+
+## [v3.1.0](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.1.0) (2024-10-26)
+
+- Add `@ianvs/prettier-plugin-sort-imports`
+- Bump dependencies
+
 ## [v3.0.2](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.0.2) (2024-06-15)
 
 - Wrap prose in Markdown files
@@ -25,7 +39,7 @@ We use semantic versioning (SemVer). [More information here](https://semver.org/
 
 - Bump Prettier and prettier-plugin-jsdoc.
 
-## [v2.0.0](https://www.npmjs.com/package/@redguy12/prettier-config/v/2.0.0) (2022-08-09) - **Latest**
+## [v2.0.0](https://www.npmjs.com/package/@redguy12/prettier-config/v/2.0.0) (2022-08-09)
 
 Breaking change:
 
