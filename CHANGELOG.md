@@ -2,7 +2,11 @@
 
 We use semantic versioning (SemVer). [More information here](https://semver.org/).
 
-## [v3.2.0](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.1.1) (2024-11-29) - **Latest**
+## [v3.2.1](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.2.1) (2024-11-29) - **Latest**
+
+- Widen Prettier peer dependency range
+
+## [v3.2.0](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.2.0) (2024-11-29)
 
 - Add `prettier-plugin-css-order`
 - Bump dependencies
