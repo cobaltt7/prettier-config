@@ -1,7 +1,7 @@
 /** @type {import("prettier").Config & import("prettier-plugin-jsdoc").JsdocOptions} */
 const config = {
 	experimentalTernaries: true,
-	htmlWhitespaceSensitivity: "ignore",
+	htmlWhitespaceSensitivity: "strict",
 	printWidth: 100,
 	proseWrap: "always",
 	quoteProps: "consistent",
