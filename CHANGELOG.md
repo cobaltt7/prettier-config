@@ -2,7 +2,15 @@
 
 We use semantic versioning (SemVer). [More information here](https://semver.org/).
 
-## [v3.2.1](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.2.1) (2024-11-29) - **Latest**
+## [v3.3.0](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.3.0) (2025-04-18) - **Latest**
+
+- Set `htmlWhitespaceSensitivity` to `strict`
+- Set `objectWrap` to `collapse`
+- Set `experimentalOperatorPosition` to `start`
+- Remove shrinkwrap file
+- Bump dependencies
+
+## [v3.2.1](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.2.1) (2024-11-29)
 
 - Widen Prettier peer dependency range
 
