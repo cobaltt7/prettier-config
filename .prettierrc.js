@@ -31,7 +31,12 @@ const config = {
 	iniSpaceAroundEquals: true,
 
 	overrides: [
-		{ files: "**.md", options: { printWidth: 120 } },
+		{
+			files: "**.md",
+			options: {
+				printWidth: 120,
+			},
+		},
 		{ files: ["**.env", "**.replit", "**/.tx/config"], options: { parser: "ini" } },
 		{ files: ["**.svg", "**.xml"], options: { parser: "html" } },
 		{
