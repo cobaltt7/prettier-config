@@ -3,7 +3,11 @@
 We use semantic versioning (SemVer).
 [More information here](https://semver.org/).
 
-## [v3.4.2](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.4.2) (2025-05-03) - **Latest**
+## [v3.4.3](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.4.3) (2025-05-03) - **Latest**
+
+- Fix issues with one sentence Markdown formatting
+
+## [v3.4.2](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.4.2) (2025-05-03)
 
 - Publish missing file
 

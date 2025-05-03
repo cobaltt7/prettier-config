@@ -9,7 +9,7 @@ export const parsers = {
 				.map((section, index) => {
 					if (index % 2 === 1) return section;
 					return section
-						.replaceAll(/(?<!\n)\n *(?!(?:\d+\.)|[>\n*+#-]|\[.+\]: )/g, " ")
+						.replaceAll(/(?<!\n)\n(?! *(?:$|\d+\.|[>\n*+#-]|\[.+\]: ))/g, " ")
 						.split("\n")
 						.map(visitLine)
 						.join("\n");
@@ -23,7 +23,7 @@ export const parsers = {
  * Adapted from
  * https://github.com/JoshuaKGoldberg/sentences-per-line/blob/main/src/sentences-per-line.ts.
  */
-function visitLine(line) {
+function visitLine(line, indentation = 0) {
 	// Ignore headings
 	if (/^\s*#/.test(line)) return line;
 
@@ -40,8 +40,8 @@ function visitLine(line) {
 			&& line[i + 1].trim() === ""
 			&& !isAfterIgnoredWord(line, i)
 		) {
-			const lineTwo = `${" ".repeat(listIndent)}${line.slice(i + 2).trim()}`;
-			return `${line.slice(0, i + 2).trimEnd()}\n${visitLine(lineTwo)}`;
+			const lineTwo = `${" ".repeat(listIndent + indentation)}${line.slice(i + 2).trimStart()}`;
+			return `${line.slice(0, i + 1)}\n${visitLine(lineTwo, listIndent + indentation)}`;
 		}
 	}
 
