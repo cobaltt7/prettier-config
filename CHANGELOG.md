@@ -1,8 +1,17 @@
 # Changelog
 
-We use semantic versioning (SemVer). [More information here](https://semver.org/).
+We use semantic versioning (SemVer).
+[More information here](https://semver.org/).
 
-## [v3.3.0](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.3.0) (2025-04-18) - **Latest**
+## [v3.4.0](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.4.0) (2025-05-03) - **Latest**
+
+- Add `prettier-plugin-organize-attributes`
+- Enforce one sentance per line in Markdown
+- Remove `prettier-plugin-ini`
+- Set `jsdocPrintWidth` to inherit from `printWidth` (100)
+- Bump dependencies
+
+## [v3.3.0](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.3.0) (2025-04-18)
 
 - Set `htmlWhitespaceSensitivity` to `strict`
 - Set `objectWrap` to `collapse`

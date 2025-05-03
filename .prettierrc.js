@@ -1,4 +1,4 @@
-/** @type {import("prettier").Config & import("prettier-plugin-jsdoc").JsdocOptions} */
+/** @type {import("prettier").Config & import("prettier-plugin-jsdoc").Options} */
 const config = {
 	experimentalTernaries: true,
 	experimentalOperatorPosition: "start",
@@ -26,13 +26,9 @@ const config = {
 	jsdocAddDefaultToDescription: false,
 	jsdocDescriptionWithDot: true,
 	jsdocPreferCodeFences: true,
-	jsdocPrintWidth: 120,
-
-	iniSpaceAroundEquals: true,
 
 	overrides: [
-		{ files: "**.md", options: { printWidth: 120 } },
-		{ files: ["**.env", "**.replit", "**/.tx/config"], options: { parser: "ini" } },
+		{ files: "**.md", options: { proseWrap: "preserve" } },
 		{ files: ["**.svg", "**.xml"], options: { parser: "html" } },
 		{
 			files: ["**/.vscode/*.json", "tsconfig.json", "jsconfig.json"],
@@ -45,11 +41,12 @@ const config = {
 	],
 
 	plugins: [
+		require.resolve("./one-sentance-markdown.mjs"),
 		require.resolve("@ianvs/prettier-plugin-sort-imports"),
-		require.resolve("prettier-plugin-jsdoc"),
 		require.resolve("prettier-plugin-css-order"),
+		require.resolve("prettier-plugin-jsdoc"),
+		require.resolve("prettier-plugin-organize-attributes"),
 		require.resolve("prettier-plugin-packagejson"),
-		require.resolve("prettier-plugin-ini"),
 	],
 };
 module.exports = config;

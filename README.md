@@ -23,4 +23,5 @@ My Prettier style guide
     node --run format
     ```
 
-Congrats! You've successfully integrated ESLint into your project with `@redguy12/prettier-config`!
+Congrats!
+You've successfully integrated Prettier into your project with `@redguy12/prettier-config`!
