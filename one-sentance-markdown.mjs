@@ -36,9 +36,9 @@ function visitLine(line) {
 		if (i === undefined || i >= line.length - 2) return line;
 
 		if (
-			[".", "?", "!"].includes(line[i]) &&
-			line[i + 1].trim() === "" &&
-			!isAfterIgnoredWord(line, i)
+			[".", "?", "!"].includes(line[i])
+			&& line[i + 1].trim() === ""
+			&& !isAfterIgnoredWord(line, i)
 		) {
 			const lineTwo = `${" ".repeat(listIndent)}${line.slice(i + 2).trim()}`;
 			return `${line.slice(0, i + 2).trimEnd()}\n${visitLine(lineTwo)}`;
