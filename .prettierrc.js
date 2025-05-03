@@ -41,7 +41,7 @@ const config = {
 	],
 
 	plugins: [
-		require.resolve("./one-sentance-markdown.mjs"),
+		require.resolve("./one-sentence-markdown.mjs"),
 		require.resolve("@ianvs/prettier-plugin-sort-imports"),
 		require.resolve("prettier-plugin-css-order"),
 		require.resolve("prettier-plugin-jsdoc"),

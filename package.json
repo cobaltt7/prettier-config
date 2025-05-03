@@ -1,6 +1,6 @@
 {
 	"name": "@redguy12/prettier-config",
-	"version": "3.4.0",
+	"version": "3.4.1",
 	"description": "My Prettier style guide",
 	"repository": {
 		"type": "git",
@@ -13,6 +13,7 @@
 	},
 	"main": ".prettierrc.js",
 	"files": [
+		"one-sentence-markdown.js",
 		".prettierrc.js",
 		"LICENSE",
 		"npm-shrinkwrap.json",
