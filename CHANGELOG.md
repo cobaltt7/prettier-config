@@ -3,7 +3,14 @@
 We use semantic versioning (SemVer).
 [More information here](https://semver.org/).
 
-## [v3.4.3](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.4.3) (2025-05-03) - **Latest**
+## [v3.4.4](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.4.4) (2025-08-06) - **Latest**
+
+- Ignore tables when condensing Markdown
+- Bump dependencies, fixing the following notable issues:
+    - Error on Prettier 3.6 when formatting files with JSDoc
+    - Error when formatting .d.ts files, skipping import sorting
+
+## [v3.4.3](https://www.npmjs.com/package/@redguy12/prettier-config/v/3.4.3) (2025-05-03)
 
 - Fix issues with one sentence Markdown formatting
 
