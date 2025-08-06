@@ -20,8 +20,8 @@ export const parsers = {
 };
 
 /**
- * Adapted from
- * https://github.com/JoshuaKGoldberg/sentences-per-line/blob/main/src/sentences-per-line.ts.
+ * @author Adapted From
+ *   https://github.com/JoshuaKGoldberg/sentences-per-line/blob/main/src/sentences-per-line.ts.
  */
 function visitLine(line, indentation = 0) {
 	// Ignore headings
@@ -29,19 +29,19 @@ function visitLine(line, indentation = 0) {
 
 	// Ignore any starting list number, e.g. "1. " or " 1. "
 	const listIndent = line.match(/^\s*(?:\d+\.|-)\s*/)?.[0].length ?? 0;
-	let i = listIndent;
+	let index = listIndent;
 
-	for (; i < line.length - 2; i += 1) {
-		i = getNextIndexNotInCode(line, i);
-		if (i === undefined || i >= line.length - 2) return line;
+	for (; index < line.length - 2; index += 1) {
+		index = getNextIndexNotInCode(line, index);
+		if (index === undefined || index >= line.length - 2) return line;
 
 		if (
-			[".", "?", "!"].includes(line[i])
-			&& line[i + 1].trim() === ""
-			&& !isAfterIgnoredWord(line, i)
+			[".", "?", "!"].includes(line[index])
+			&& line[index + 1].trim() === ""
+			&& !isAfterIgnoredWord(line, index)
 		) {
-			const lineTwo = `${" ".repeat(listIndent + indentation)}${line.slice(i + 2).trimStart()}`;
-			return `${line.slice(0, i + 1)}\n${visitLine(lineTwo, listIndent + indentation)}`;
+			const lineTwo = `${" ".repeat(listIndent + indentation)}${line.slice(index + 2).trimStart()}`;
+			return `${line.slice(0, index + 1)}\n${visitLine(lineTwo, listIndent + indentation)}`;
 		}
 	}
 
@@ -50,36 +50,37 @@ function visitLine(line, indentation = 0) {
 
 const ignoredWords = ["ie", "i.e", "eg", "e.g", "etc", "ex"];
 
-function isAfterIgnoredWord(line, i) {
+function isAfterIgnoredWord(line, index) {
 	for (const ignoredWord of ignoredWords) {
-		if (ignoredWord === line.substring(i - ignoredWord.length, i).toLowerCase()) return true;
+		if (ignoredWord === line.substring(index - ignoredWord.length, index).toLowerCase())
+			return true;
 	}
 
 	return false;
 }
 
-function getNextIndexNotInCode(line, i) {
-	if (line[i] !== "`") return i;
+function getNextIndexNotInCode(line, index) {
+	if (line[index] !== "`") return index;
 
-	i += 1;
+	index += 1;
 
 	// Get to the inside of this inline code segment
-	while (line[i] === "`") {
-		i += 1;
-		if (i === line.length) return undefined;
+	while (line[index] === "`") {
+		index += 1;
+		if (index === line.length) return undefined;
 	}
 
 	// Get to the end of the inline code segment
 	while (true) {
-		i = line.indexOf("`", i);
-		if (i === -1) return undefined;
-		if (line[i - 1] !== "\\") break;
+		index = line.indexOf("`", index);
+		if (index === -1) return undefined;
+		if (line[index - 1] !== "\\") break;
 	}
 
-	while (line[i] === "`") {
-		i += 1;
-		if (i === line.length) return undefined;
+	while (line[index] === "`") {
+		index += 1;
+		if (index === line.length) return undefined;
 	}
 
-	return i;
+	return index;
 }
