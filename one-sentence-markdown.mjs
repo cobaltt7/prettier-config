@@ -9,7 +9,7 @@ export const parsers = {
 				.map((section, index) => {
 					if (index % 2 === 1) return section;
 					return section
-						.replaceAll(/(?<!\n)\n(?! *(?:$|\d+\.|[|>\n*+#-]|\[.+\]: ))/g, " ")
+						.replaceAll(/(?<!\n|^)\n(?! *(?:$|\d+\.|[|>\n*+#-]|\[.+\]: ))/g, " ")
 						.split("\n")
 						.map(visitLine)
 						.join("\n");
