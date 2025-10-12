@@ -10,23 +10,6 @@ const config = {
 	tabWidth: 4,
 	useTabs: true,
 
-	importOrder: [
-		"<TYPES>^(node:)",
-		"<TYPES>",
-		"<TYPES>^[.]",
-		"",
-		"<BUILTIN_MODULES>",
-		"",
-		"<THIRD_PARTY_MODULES>",
-		"",
-		"^[.]",
-	],
-	importOrderTypeScriptVersion: getTypeScriptVersion(),
-
-	jsdocAddDefaultToDescription: false,
-	jsdocDescriptionWithDot: true,
-	jsdocPreferCodeFences: true,
-
 	overrides: [
 		{ files: "**.md", options: { proseWrap: "preserve" } },
 		{ files: ["**.svg", "**.xml"], options: { parser: "html" } },
@@ -48,6 +31,24 @@ const config = {
 		require.resolve("prettier-plugin-organize-attributes"),
 		require.resolve("prettier-plugin-packagejson"),
 	],
+
+	importOrder: [
+		"<TYPES>^(node:)",
+		"<TYPES>",
+		"<TYPES>^[.]",
+		"",
+		"<BUILTIN_MODULES>",
+		"",
+		"<THIRD_PARTY_MODULES>",
+		"",
+		"^[.]",
+	],
+    importOrderSafeSideEffects: ['\\.css$'],
+	importOrderTypeScriptVersion: getTypeScriptVersion(),
+
+	jsdocAddDefaultToDescription: false,
+	jsdocDescriptionWithDot: true,
+	jsdocPreferCodeFences: true,
 };
 module.exports = config;
 
