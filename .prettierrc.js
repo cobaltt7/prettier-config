@@ -43,7 +43,7 @@ const config = {
 		"",
 		"^[.]",
 	],
-    importOrderSafeSideEffects: ['\\.css$'],
+	importOrderSafeSideEffects: ["\\.css$"],
 	importOrderTypeScriptVersion: getTypeScriptVersion(),
 
 	jsdocAddDefaultToDescription: false,
