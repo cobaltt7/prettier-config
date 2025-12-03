@@ -31,9 +31,9 @@
 		"prettier-plugin-packagejson": "2.5.20"
 	},
 	"devDependencies": {
-		"prettier": "3.7.3"
+		"prettier": "3.7.4"
 	},
 	"peerDependencies": {
-		"prettier": "^3.7.3"
+		"prettier": "^3.7.4"
 	}
 }
