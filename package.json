@@ -4,7 +4,7 @@
 	"description": "My Prettier style guide",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RedGuy12/prettier-config.git"
+		"url": "git+https://github.com/cobaltt7/prettier-config.git"
 	},
 	"license": "MIT",
 	"author": {
